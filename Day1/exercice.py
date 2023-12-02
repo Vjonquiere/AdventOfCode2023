@@ -4,7 +4,8 @@ SPELLED_INT = ["one", "two", "three", "four", "five", "six", "seven", "eight", "
 def get_input(filePath:str):
     return open(filePath, "r")
 
-def find_last_occurence_index(string:str, substring:str):
+def find_last_occurence_index(string:str, substring:str) -> int:
+    """ Takes a string and a sequence and return the index of the last occurence of the sequence """
     last_index = string.find(substring)
     for i in range(len(string)):
         if string.find(substring, i) != -1:
@@ -55,12 +56,3 @@ def parse(inputFile, secondPart=False):
 
 print("Part 1:", parse(get_input("input")))
 print("Part 2:", parse(get_input("input"), True))
-
-
- ## 55935
- ## 55901
- ## 55301
-
-
- ## 4ninecjzlk7nine
- ## 5sixtnthdqksseven5
